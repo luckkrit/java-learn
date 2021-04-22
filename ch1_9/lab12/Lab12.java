@@ -29,5 +29,15 @@ public class Lab12 {
         System.out.printf("Convert '%s' to upper '%s'\n", string1, string1.toUpperCase(Locale.ROOT));
         // 12.7
         System.out.printf("Convert '%s' to upper and trim '%s'\n", string2, string2.trim().toUpperCase(Locale.ROOT));
+        // Optional
+        printName();
+    }
+
+    //Optional
+    public static void printName() {
+        String name = "Krit";
+        String surname = "Chomaitong";
+        System.out.printf("%s %s", name.toLowerCase(), surname.toLowerCase().substring(0, surname.length() - 1)
+                + surname.substring(surname.length() - 1).toUpperCase());
     }
 }
