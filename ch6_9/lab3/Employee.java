@@ -11,6 +11,10 @@ public class Employee {
         salary = salaryInput;
     }
 
+    public String getEmployeeName() {
+        return this.firstname + " " + this.lastname;
+    }
+
     public void hello() {
         System.out.println("Hello " + firstname);
     }
