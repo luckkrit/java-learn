@@ -3,6 +3,8 @@ package ch6_9.homework;
 public class CEO extends Employee {
     private String dressCode;
 
+    private Employee[] employees;
+
     public CEO(String firstnameInput, String lastnameInput, int salaryInput) {
         super(firstnameInput, lastnameInput, salaryInput);
     }
@@ -51,6 +53,18 @@ public class CEO extends Employee {
         System.out.println("He goes to golf club to find a new connection. Dress with :" + this.dressCode);
     }
 
+    public void setEmployees(Employee[] employees) {
+        this.employees = employees;
+    }
+
+    public void showEmployees() {
+        if (employees != null) {
+            for (int i = 0; i < employees.length; i++) {
+                Programmer programmer = (Programmer) employees[i];
+                System.out.println(programmer.firstname + " " + programmer.lastname + " " + programmer.getId() + " " + programmer.getType());
+            }
+        }
+    }
 }
 
 
